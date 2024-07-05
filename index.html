@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Signup or login to Najeeb Ahmad 07's website to explore the latest projects and blog posts.">
+    <title>Signup & Login - Najeeb Ahmad 07</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .auth-section {
+            background: #f4f4f4;
+            padding: 50px 0;
+        }
+        .auth-title {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .auth-content {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .auth-image {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .auth-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .login-form {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <section class="auth-section text-center">
+        <div class="container">
+            <h2 class="auth-title">Signup</h2>
+            <img src="https://static.vecteezy.com/system/resources/previews/003/689/230/non_2x/online-registration-or-sign-up-login-for-account-on-smartphone-app-user-interface-with-secure-password-mobile-application-for-ui-web-banner-access-cartoon-people-illustration-vector.jpg" alt="Illustration" class="auth-image">
+            <p class="auth-content">
+                Join Najeeb Ahmad 07's community to stay updated with the latest projects, blog posts, and more. Sign up to create your account and be a part of the journey.
+            </p>
+            <div class="auth-form signup-form">
+                <form>
+                    <div class="form-group">
+                        <label for="signup-name">Name</label>
+                        <input type="text" class="form-control" id="signup-name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-email">Email address</label>
+                        <input type="email" class="form-control" id="signup-email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-password">Password</label>
+                        <input type="password" class="form-control" id="signup-password" placeholder="Enter your password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Signup</button>
+                </form>
+                <p class="auth-content mt-3">Already a user? <button class="btn btn-link" id="show-login">Please Login</button></p>
+            </div>
+
+            <div class="auth-form login-form">
+                <h2 class="auth-title">Login</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="login-email">Email address</label>
+                        <input type="email" class="form-control" id="login-email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" class="form-control" id="login-password" placeholder="Enter your password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </form>
+                <p class="auth-content mt-3">New user? <button class="btn btn-link" id="show-signup">Sign Up</button></p>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#show-login').click(function() {
+                $('.signup-form').hide();
+                $('.login-form').show();
+                $('html, body').animate({
+                    scrollTop: $(".login-form").offset().top
+                }, 1000);
+            });
+            $('#show-signup').click(function() {
+                $('.login-form').hide();
+                $('.signup-form').show();
+                $('html, body').animate({
+                    scrollTop: $(".signup-form").offset().top
+                }, 1000);
+            });
+        });
+    </script>
+</body>
+</html>
